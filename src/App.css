@@ -1,0 +1,175 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+/*  */
+.main {
+  padding: 0 10em;
+}
+
+#payment {
+  font-size: 2em;
+  position: fixed;
+  bottom: 1em;
+  right: 1em;
+  border: 2px solid;
+  padding: 0.2em;
+  border-radius: 50% 50%;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #1f2235;
+  flex-direction: column;
+}
+#payment span {
+  font-size: 0.5em;
+  color: gold;
+  /* color: #ff4a57; */
+  font-weight: bold;
+}
+#payment #price {
+  color: white;
+  font-weight: bold;
+  font-size: 0.8em;
+}
+header {
+  /* margin-bottom: 5em; */
+}
+
+header h3 {
+  margin: 0;
+  color: #ff4a57;
+  text-align: left;
+  font-size: 1.5em;
+}
+/* #article::before {
+  position: absolute;
+  width: 30%;
+  height: 10%;
+  background-color: #ffffff;
+  top: 0;
+  right: 0;
+  content: "Ajouté";
+  transform: translateY(-30px);
+  transition: 1s;
+  color: #1f2235;
+  font-weight: bold;
+  text-transform: uppercase;
+} */
+#article {
+  position: relative;
+  border: 1px solid white;
+  padding: 2em;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  transition: 0.5s;
+  cursor: pointer;
+  overflow: hidden;
+}
+#article:hover {
+  /* transform: translateY(-10px); */
+}
+#article:active::before {
+  animation: animate-adding-article 0.5s ease-out forwards;
+}
+#article #ajout {
+  background-color: white;
+  color: #1f2235;
+  padding: 0.5em 1em;
+  position: absolute;
+  top: -40px;
+  right: 0;
+  text-transform: uppercase;
+  font-weight: bold;
+  transition: 0.3s ease-out;
+}
+#article:hover #prix {
+  color: white;
+  background: #ff4a57;
+}
+#article #prix {
+  border: 3px solid #ff4a57;
+  padding: 1em;
+  color: #ff4a57;
+  transition: 0.5s;
+}
+#article p {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+#articles-bar-cont {
+  display: flex;
+  justify-content: center;
+}
+#articles-bar {
+  width: 4em;
+  height: 1px;
+  background: gold;
+  margin-bottom: 3em;
+}
+#articles-services {
+  text-align: center;
+  text-transform: uppercase;
+  color: gold;
+}
+#articles-services span {
+  color: white;
+}
+/* span {
+  color: white;
+  background: #ff4a57;
+} */
+/*  */
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes animate-adding-article {
+  from {
+    transform: translateY(-10px);
+  }
+  to {
+    transform: translateY(50px);
+  }
+}
+
+@media screen and (max-width: 980px) {
+  .main {
+    padding: 0;
+  }
+}
