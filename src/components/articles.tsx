@@ -72,6 +72,7 @@ const Articles: React.FC<IProps> = ({data}) => {
                     )}
                 )}
             </Grid>
+            <div id="spacer"></div>
         </React.Fragment>
     )
 }

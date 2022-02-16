@@ -151,6 +151,9 @@ header h3 {
   background: #ff4a57;
 } */
 /*  */
+#spacer {
+  height: 0;
+}
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -171,5 +174,8 @@ header h3 {
 @media screen and (max-width: 980px) {
   .main {
     padding: 0;
+  }
+  #spacer {
+    height: 200px;
   }
 }
